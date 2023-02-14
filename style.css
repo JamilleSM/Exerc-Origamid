@@ -1,0 +1,182 @@
+body {
+  margin: 0px;
+  background-color: #f7f7f7;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  gap: 60px;
+  justify-items: center;
+  margin-top: 60px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0px;
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.geral {
+  display: grid;
+  justify-items: center;
+  gap: 60px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-item {
+  display: block;
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  color: #000000;
+  border: 2px solid #ffffff;
+}
+
+.menu-item:hover {
+  border-color: #900;
+}
+
+.pc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+}
+
+.intro {
+  background-color: #ffffff;
+  padding: 40px;
+  text-align: right;
+  position: relative;
+  display: grid;
+  align-content: center;
+  justify-items: end;
+  gap: 20px;
+}
+
+.intro::before {
+  content: "";
+  background-color: #ee2211;
+  width: 60px;
+  height: 4px;
+  position: absolute;
+  top: 30px;
+  right: -30px;
+}
+
+.img-bic img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.btn {
+  background-color: #ee2211;
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  background: #900;
+}
+
+.subtitulo {
+  color: #c6c6c6;
+  font-size: 4rem;
+  text-align: right;
+  padding: 40px;
+  align-self: center;
+  background-image: url(img/onda.svg);
+}
+
+.vtg {
+  background-color: #ffffff;
+  padding: 40px;
+}
+
+.vtg-itens {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px;
+  padding: 20px;
+  border-left: 4px solid transparent;
+}
+
+.vtg-itens:nth-child(odd) {
+  background: #f7f7f7;
+}
+
+.vtg-itens:hover {
+  border-color: #900;
+}
+
+.vtg-itens p {
+  grid-column: 2;
+}
+
+.rdp {
+  background: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+  .cont {
+    grid-template-columns: 1fr;
+  }
+  .subtitulo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .geral {
+    gap: 30px;
+  }
+  .contt {
+    grid-template-columns: 1fr;
+  }
+  .intro {
+    text-align: left;
+    justify-items: start;
+  }
+  .intro::before {
+    display: none;
+  }
+  .subtitulo {
+    font-size: 3rem;
+  }
+}
